@@ -1,0 +1,82 @@
+<div class="bg-light py-3 py-md-5 text-center">
+  <img src="assets/logo.png" class="logo-img"/>
+
+  <div class="container-xl">
+      <div class="row justify-content-md-center">
+          <div class="col-12 col-md-10 col-lg-8 col-xl-7 col-xxl-6">
+              <div class="bg-white p-4 p-md-5 rounded shadow-sm">
+                  <div class="row">
+                      <div class="col-12">
+                          <div class="align-items-center">
+                              <h3>Calcul de cout</h3>
+                          </div>
+                      </div>
+                  </div>
+
+                  <form class="form acceuil" [formGroup]="acceuilform" (ngSubmit)="onSubmit()">
+                      <div class="row gy-md-4 gy-md-4 overflow-hidden">
+                          <!-- Your form controls here -->
+                          <div class="col-12 col-md-4 d-flex align-items-center">
+                              <label class="form-label me-2" for="quantite">Quantite <span class="text-danger">*</span></label>
+                              <input type="number" class="form-control" formControlName="quantite" placeholder="Entrez la quantité" required>
+                          </div>
+                         
+                          <div class="col-12 col-md-4 d-flex align-items-center">
+                              <label class="form-label me-2" for="nb_type">Nombre de type de tissu <span class="text-danger">*</span></label>
+                              <input type="number" class="form-control" formControlName="nb_type" placeholder="Entrez le nombre de type de tissu" required>
+                          </div>
+                          <div class="col-12 col-md-4 d-flex align-items-center">
+                              <label class="form-label me-2" for="perimetre">Périmètre du modèle <span class="text-danger">*</span></label>
+                              <input type="number" class="form-control" formControlName="perimetre" placeholder="Entrez le périmètre du modèle" required>
+                          </div>
+                          <div class="col-12 col-md-4 d-flex align-items-center">
+                              <label class="form-label me-2" for="min_article">Minute d'article <span class="text-danger">*</span></label>
+                              <input type="number" class="form-control" formControlName="min_article" placeholder="Entrez la minute d'article" required>
+                          </div>
+                          <div class="col-12 col-md-4 d-flex align-items-center">
+                            <label class="form-label me-2" for="nbr_roul">Nombre de rouleau<span class="text-danger">*</span></label>
+                            <input type="number" class="form-control" formControlName="nbr_roul"  required>
+                        </div>
+                        <div class="col-12 col-md-4 d-flex align-items-center">
+                            <label class="form-label me-2" for="nbr_matelas">Nombre matelas<span class="text-danger">*</span></label>
+                            <input type="number" class="form-control" formControlName="nbr_matelas"  required>
+                        </div>
+                        <div class="col-12 col-md-4 d-flex align-items-center">
+                            <label class="form-label me-2" for="Lmnbrplis">Lm*nbr_plis<span class="text-danger">*</span></label>
+                            <input type="number" class="form-control" formControlName="Lmnbrplis" required>
+                        </div>
+                          <div class="col-12 col-md-4 d-flex align-items-center">
+                              <label class="form-label me-2" for="temps_plan">Temps de planification<span class="text-danger">*</span></label>
+                              <input type="number" class="form-control" formControlName="temps_plan" placeholder="3" required>
+                          </div>
+                          <div class="col-12 col-md-4 d-flex align-items-center">
+                              <label class="form-label me-2" for="cout_paln">Cout de planification<span class="text-danger">*</span></label>
+                              <input type="number" class="form-control plan" formControlName="cout_paln" placeholder="0.16" required>
+                          </div>
+                          <div class="col-12 col-md-4 d-flex align-items-center">
+                              <label class="form-label me-2" for="cout_matel">Cout de matelassage<span class="text-danger">*</span></label>
+                              <input type="number" class="form-control" formControlName="cout_matel" placeholder="0.25" required>
+                          </div>
+                          <div class="col-12 col-md-4 d-flex align-items-center">
+                              <label class="form-label me-2" for="cout_coupe">Cout de coupe<span class="text-danger">*</span></label>
+                              <input type="number" class="form-control" formControlName="cout_coupe" placeholder="0.61" required>
+                          </div>
+                          <div class="col-12 col-md-4 d-flex align-items-center">
+                              <label class="form-label me-2" for="cout_lancement">Cout de lancement<span class="text-danger">*</span></label>
+                              <input type="number" class="form-control" formControlName="cout_lancement" placeholder="0.28" required>
+                          </div>
+                        
+                      </div>
+                      <div class="row mt-3">
+                          <div class="col-12">
+                              <div class="d-grid">
+                                  <button class="btn btn-lg btn-primary" type="submit">Calculer</button>
+                              </div>
+                          </div>
+                      </div>
+                  </form>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
