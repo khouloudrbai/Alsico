@@ -76,10 +76,8 @@ export class AcceuilComponent implements OnInit {
 
 
 
-        this.temps_matelassage = (28-46.7*nb_type -quantite + 176.3 *nbr_rouleauu + 0.0349*Lmnbr_pliss + 40*nbr_matelass)/60;
-        console.log(this.temps_matelassage);
-
-
+        this.temps_matelassage = -21- 2.44*quantite + 169.9 *nbr_rouleauu + 0.01*Lmnbr_pliss + 40*nbr_matelass;
+         
         this.coupe = (-280 + 0.1174 * perim + 14.53 * quantite + 4.40 * minimumart+ 74*nbr_matelass) / 60;
         this.Lancer = (2.7 * quantite * minimumart)/60 ;
         this.totale=this.coupe+this.Lancer+this.temps_matelassage+temps_planing;
