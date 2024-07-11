@@ -76,12 +76,12 @@ export class AppComponent  implements OnInit {
 
 
 
-        this.temps_matelassage = -21- 2.44*quantite + 169.9 *nbr_rouleauu + 0.01*Lmnbr_pliss + 40*nbr_matelass;
+        this.temps_matelassage = (-21- 2.44*quantite + 169.9 *nbr_rouleauu + 0.01*Lmnbr_pliss + 40*nbr_matelass)/60;
          
         this.coupe = (-280 + 0.1174 * perim + 14.53 * quantite + 4.40 * minimumart+ 74*nbr_matelass) / 60;
         this.Lancer = (2.7 * quantite * minimumart)/60 ;
         this.totale=this.coupe+this.Lancer+this.temps_matelassage+temps_planing;
-        this.cout_total=(-135-11.675*nb_type+8.61*quantite+44.075*nbr_rouleauu+0.008725*Lmnbr_pliss+55.14*nbr_matelass+0.0716*perim+2.684*minimumart+0.756*quantite*minimumart)/60;
+        this.cout_total=this.temps_matelassage*cout_dematel+cout_decoupe*this.coupe+this.Lancer*cout_delancement+temps_planing*cout_palning;
         const message = `
         <span style=" font-size: 25px;"> Le temps de Matelassage est de : ${this.temps_matelassage.toFixed(2)} minutes.<br>
         <span style="font-size: 25px;"> Le temps de coupe est de : ${this.coupe.toFixed(2)} minutes.<br>
